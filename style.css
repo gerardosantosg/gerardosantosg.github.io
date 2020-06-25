@@ -1,0 +1,91 @@
+body {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bolder;
+  background-color: #1f1f1f;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.8fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "h1"
+    "s1"
+    "s2"
+    "s3";
+  grid-gap: 0.7rem;
+  text-align: center;
+  margin-bottom: 26%;
+}
+
+h1 {
+  grid-area: h1;
+  color: #168a1a;
+}
+
+section {
+  width: 80%;
+  margin: 0 auto;
+  border: rgb(117, 80, 15) solid 2px;
+}
+.s1 {
+  grid-area: s1;
+  background-color: #07a166;
+}
+
+.s2 {
+  grid-area: s2;
+  background-color: #db6470;
+}
+.s3 {
+  grid-area: s3;
+  background-color: #a3a524;
+}
+h2 {
+  margin-top: auto;
+
+  background-color: rgb(86, 1, 119);
+  border-bottom: solid 2px rgb(117, 80, 15);
+  border-left: solid 2px rgb(117, 80, 15);
+  color: #edf;
+  width: 20%;
+  margin-left: 80%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr 1fr;
+    grid-template-areas:
+      "h1 h1"
+      "s1 s2"
+      "s3 s3";
+  }
+  .s1,
+  .s2 {
+    width: 90%;
+  }
+  .s3 {
+    width: 95%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    grid-template-areas:
+      "h1 h1 h1"
+      "s1 s2 s3";
+  }
+
+  section {
+    height: 60%;
+    min-width: 45%;
+  }
+  p {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
